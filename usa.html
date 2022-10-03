@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Game HTML</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<link rel="stylesheet" href="./css/main.css" />
+	</head>
+	<body>
+
+		
+
+		<div id="wrapper_world">
+			<video autoplay muted loop id="myVideo">
+				<div class="overlay"></div>
+				<source src="digital_city.mp4"  type="video/mp4">
+				Your browser does not support HTML5 video.
+			</video>
+
+			
+			
+			<div class="box-container">
+				<div class="world-top-info">
+					<a class="back" href="country.html"><img src="img/arrow-left.png" alt="arrow"></a></a>
+					
+					<img class="logo" src="img/hacker_logo.png" alt="logo"></a>
+					<h4>Map: United States of America</h4>
+					<p> <img src="img/square-color.svg"></a> Available City Maps</p>
+				</div>
+				
+				
+			</div><!-- /Box-Container -->
+		</div>	<!-- /Wrapper -->
+
+
+
+
+
+		<!-- Scripts : Play video in modal-->
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script  src="./js/videopopup.js"></script>
+
+		
+		<!-- Open-Play Video in Modal Popup -->
+		<script type="text/javascript">
+			$(function() {
+				$('#vidBox').VideoPopUp({
+					backgroundColor: "#17212a",
+					opener: "video1",
+					idvideo: "v1",
+					pausevideo: false
+				});
+			});
+		</script>
+
+		
+
+		
+
+	</body>
+</html>

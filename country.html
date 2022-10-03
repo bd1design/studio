@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Game HTML</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<link rel="stylesheet" href="./css/main.css" />
+	</head>
+	<body>
+
+		
+
+		<div id="wrapper_world" style="background-color:rgb(0,0,0, 0.4);">
+			
+			<video autoplay muted loop id="myVideo">
+				<div class="overlay"></div>
+				<source src="digital_city.mp4"  type="video/mp4">
+				Your browser does not support HTML5 video.
+			</video>
+
+			<div class="world-top-info">
+				
+				
+				<img class="logo" src="img/hacker_logo.png" alt="logo"></a>
+				
+			</div>
+			
+			<div class="box-container">
+				<div class="in-country">
+					<div class="country-text-1">
+						<h1 class="g-title">Welcome To The Game</h1>
+
+						<img class="border-text" src="img/border-headline.png" alt="border-headline">
+
+						<p>Some Text Summary : <br>Experience training in highly complex, real-world environments. Practice Hands-on Cutting-edge Cyber Security Offensive &amp; Defensive Scenarios.</p>
+
+						<p>Gain Knowledge &amp; Skills in an immersive Gamified Simulator.Accelerate the process of gaining experience by increasing exposure to incidents &amp; challenges.
+						</p>
+
+						<p>HackersEye`s answer to the rising demand for a new affective, practical &amp; interesting training platform.Practice your teams in our hands-on challenges to achieve a higher security posture  &amp; cyber resilience.</p>
+						
+						<p>Training shouldn't kill productivity or ruin someone's day. Our security awareness training is quick, fun, and helps employees get back to their work</p>
+					
+						<a href="world-map.html" class="play-game-btn"> <span>Start A Game</span> </a>
+					
+					</div>
+				</div>
+			</div><!-- /Box-Container -->
+		</div>	<!-- /Wrapper -->
+
+
+
+
+
+		<!-- Scripts : Play video in modal-->
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script  src="./js/videopopup.js"></script>
+
+		
+		<!-- Open-Play Video in Modal Popup -->
+		<script type="text/javascript">
+			$(function() {
+				$('#vidBox').VideoPopUp({
+					backgroundColor: "#17212a",
+					opener: "video1",
+					idvideo: "v1",
+					pausevideo: false
+				});
+			});
+		</script>
+
+	</body>
+</html>

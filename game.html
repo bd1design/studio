@@ -1,0 +1,342 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Play Game</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<link rel="stylesheet" href="./css/main.css" />
+	</head>
+	<body>
+
+		
+
+		<div id="game-playground">
+			<div class="g-container">
+				
+				<div class="game_header">
+					<div class="block_headline">
+							<h2 class="game_top_name"><img class="i-1" src="img/blue-skewed-lines.png" alt="line-img"> System Awareness Game Test   <img class="i-2" src="img/blue-skewed-lines-90.png" alt="line-img"> </h2>
+							
+							<div class="block_small_info">	
+									<p class="g-team"><img src="img/dot-blue.png" alt="blue-dot"> Blue Team</p>
+									<p class="g-level"><img src="img/dot-green.png" alt="green-dot"> Easy Level</p>
+							</div>
+					</div>
+				</div><!-- /Game Header -->
+
+				<div class="inner-game">
+					
+					<div class="quizArea">
+						
+						<div class="multipleChoiceQues">
+							<h1 class="mc_quiz">	Reduce the Risk of Phishing Attacks  </h1>
+
+							<img class="g-txt-border" src="img/big-game-headline-border.png" alt="line-img">
+
+							<div class="quizBox">
+								
+								<div class="question"> </div>
+								
+								<div class="answerOptions"></div>
+								<div class="buttonArea">
+									<button id="next" class="hidden">Confirm & Continue</button>
+									<button id="submit" class="hidden">Submit</button>
+								</div>
+
+								<div class="my-progress">
+									<progress class="my-progress-bar" min="0" max="100" value="0" step="9" aria-labelledby="my-progress-completion"></progress>
+									<p id="my-progress-completion" class="js-my-progress-completion sr-only" aria-live="polite">0% complete</p>
+								</div>
+							</div>
+						</div><!-- /multipleChoiceQues -->
+						
+						
+						<div class="sidebar_summary">
+							<div class="box_info_top">
+								<a href="#" id="open_modal_info" class="go-info"><img src="img/icon-info.png"><span>Info Summary</span></a>
+							</div>
+
+							<div class="box_info_time">
+								<p>Time To Answer:</p>
+								<span id="timer"></span>
+							</div>
+
+							<div class="box_info_clue">
+								<div class="c-ls">
+									<p>Take a Clue:</p>
+									<a href="#" class="open-clue-popup"><img src="img/icon-take-clue.png"></a>
+								</div>
+
+								<div class="c-rs">
+									<p>Clues Taken:</p>
+									<span class="taken_clues">1 / 2</span>
+								</div>
+								
+							</div>
+
+
+						
+						</div>
+						
+						<div class="resultArea">
+							<div class="resultPage1">
+
+								 <div class="chart-wrapper">
+									<div class="img-result">
+										<img src="img/trophy-result.png" alt="trophy">
+									</div>
+
+									<div class="briefchart">
+										<div class="resultBox">
+											<h1>Result Training Summary</h1>
+											<p>Great Job! Thank you for participating. Our Training Game shouldn't kill productivity or ruin someone's day. Our security awareness training is quick, fun, and helps employees  to achieve a higher security posture and enhance cyber resilience.</p>
+										 </div>
+									
+									
+										<svg height="300" width="300" id="_cir_progress">
+											<g>
+												<rect x="0" y="1" width="30" height="15" fill="#fb2429" />
+												<text x="32" y="14" font-size="14" class="_text_incor">Incorrect : 12 </text>
+											</g>
+											<g>
+												<rect x="160" y="1" width="30" height="15" fill="#2d9f00" />
+												<text x="192" y="14" font-size="14" class="_text_cor">Correct : 12</text>
+											</g>
+											<circle class="_cir_P_x" cx="150" cy="150" r="120" stroke="#fb2429" stroke-width="20" fill="none" onmouseover="evt.target.setAttribute('stroke', 'rgba(251, 36, 41,0.7)');" onmouseout="evt.target.setAttribute('stroke','#fb2429');"></circle>
+											<circle class="_cir_P_y" cx="150" cy="150" r="120" stroke="#2d9f00" stroke-width="20" stroke-dasharray="0,1000" fill="none" onmouseover="evt.target.setAttribute('stroke', 'rgba(45, 159, 0,0.7)');" onmouseout="evt.target.setAttribute('stroke','#2d9f00');"></circle>
+											<text x="50%" y="50%" text-anchor="middle" stroke="none" stroke-width="1px" dy=".3em" class="_cir_Per" font-size="18" color="#fff">0%</text>
+										</svg>
+
+										<div class="resultBtns">
+											<button class="viewanswer">View Your Answers</button>			
+										</div>
+									
+									</div>
+								 
+								</div><!-- /chart-wrapper -->
+							
+							
+							</div>
+							<div class="resultPage2">
+								<h1>Your Result</h1>
+								<div class="chartBox">
+									<canvas id="myChart" width="400" height="400"></canvas>
+								</div>
+								<button class="backBtn">Back</button>
+							</div>
+							<div class="resultPage3">
+								<h1>Your Answers</h1>
+								<div class="allAnswerBox"> </div>
+								<button class="backBtn">Back</button>
+							</div>
+						</div>
+					</div>
+				</div><!-- /g-inner game -->
+			
+			</div><!-- /g-container -->
+		</div>	<!-- /game-playground -->
+
+
+
+		<!-- MODAL POPUP INFO SUMMARY GAME  -->
+		<div id="modal_game_info" class="modal">
+			<!-- Modal Content -->
+			<div class="modal-content-info">
+				
+				<img class="close" src="img/close-white.png" alt="close">
+				
+				<!-- Modal Body -->
+				<div class="modal-body-info">
+					
+					<h2 class="modal-headline">Game Training Info</h2>
+					
+					<div class="game-ow">
+						<img class="img-left" src="img/shild-game-rounded.png" alt="shild-game-rounded">
+
+						<ul class="tr-info">
+							<li>
+								<p>Difficult</p>
+								<span class="d-level">Easy</span>
+							</li>
+							<li>
+								<p>Points</p>
+								<span class="d-points">+600</span>
+							</li>
+							<li>
+								<p>Task</p>
+								<span class="d-task">15</span>
+							</li>
+						</ul>
+					</div>
+					
+					<div class="middle">
+						<div class="m-1">
+							<h6>Objective:</h6>
+						</div>
+
+						<div class="m-2">
+							<a href="#" class="ply-video-modal"><img src="img/modal-play.png" alt="playvideo">Play Video</a>
+						</div>
+
+						<img class="md-text-border" src="img/border-text-modal.png" alt="line-img">
+
+						<p>Training shouldn't kill productivity or ruin someone's day. Our security awareness training is quick, fun, and helps employees get back to their work</p>
+
+						<p>Phishing attacks are more sophisticated than ever. Our approach goes past simply training and creates habits that help employees spot and avoid phishing emails.</p>
+
+						<p>Accelerate the process of gaining experience by increasing exposure to incidents & challenges.	</p>
+					</div>
+				</div>	<!-- modal body -->
+			
+			</div>
+		</div>
+
+
+
+		<!-- MODAL POPUP TAKE A CLUE -->
+		<div id="popup_clue" class="modal">
+			<!-- Modal Content -->
+			<div class="modal-content-clue">
+				
+					<div class="close fa fa- close"></div>    
+				
+				<!-- Modal Body -->
+				<div class="modal-body-clue">
+					
+					<h2 class="clue-headline">Take a Clue Help</h2>
+					
+					<div class="clue-text">
+						<p>Accelerate the process of gaining experience by increasing exposure to incidents & challenges.Phishing attacks are more sophisticated than ever. Our approach goes past simply training and creates habits that help employees spot and avoid phishing emails....</p>
+					</div>
+			
+					<img class="img-clue-icon" src="img/ninja-clue-img.png" alt="ninjaclue">
+
+					<a href="" class="close-btn">Ok,Thanks on Clue</a>
+				
+				</div>	<!-- modal body -->
+			
+			</div>
+		</div>
+
+
+
+
+
+
+		<!-- Scripts -->
+			
+		<!-- Script for chart results on the end  -->
+		<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+		<script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.js'></script>
+		<script src='https://raw.githubusercontent.com/emn178/Chart.PieceLabel.js/master/src/Chart.PieceLabel.js'></script>
+		
+		<!-- Script With Game Quiz Questions  -->
+		<script  src="./js/script.js"></script>
+
+
+		<!-- Script Open Popup Modal for Info Summary Game   -->
+		<script>
+			$(function() {
+  
+				// Vars
+				var modBtn  = $('#open_modal_info'),
+					modal   = $('#modal_game_info'),
+					close   = modal.find('.close'),
+					modContent = modal.find('.modal-content-info');
+				
+				// open modal when click on open modal button 
+				modBtn.on('click', function() {
+					modal.css('display', 'block');
+					modContent.removeClass('modal-animated-out').addClass('modal-animated-in');
+				});
+				
+				// close modal when click on close button or somewhere out the modal content 
+				$(document).on('click', function(e) {
+					var target = $(e.target);
+					if(target.is(modal) || target.is(close)) {
+					modContent.removeClass('modal-animated-in').addClass('modal-animated-out').delay(300).queue(function(next) {
+						modal.css('display', 'none');
+						next();
+					});
+					}
+				});
+				
+				});
+
+		</script>
+
+
+
+		<!-- Script Open Popup Modal for Take a Clue   -->
+		<script>
+			$(function() {
+	
+				// Vars
+				var modBtn  = $('.open-clue-popup'),
+					modal   = $('#popup_clue'),
+					close   = modal.find('.close-btn'),
+					modContent = modal.find('.modal-content-clue');
+				
+				// open modal when click on open modal button 
+				modBtn.on('click', function() {
+					modal.css('display', 'block');
+					modContent.removeClass('modal-animated-out').addClass('modal-animated-in');
+				});
+				
+				// close modal when click on close button or somewhere out the modal content 
+				$(document).on('click', function(e) {
+					var target = $(e.target);
+					if(target.is(modal) || target.is(close)) {
+					modContent.removeClass('clue-animated-in').addClass('clue-animated-out').delay(300).queue(function(next) {
+						modal.css('display', 'none');
+						next();
+					});
+					}
+				});
+				
+				});
+
+		</script>
+
+
+		<script>
+			var seconds = 180,
+				myTimer = document.getElementById("timer"),
+				countDown = setInterval(secondsInterval, 1000);
+
+			function secondsInterval() {
+				
+				"use strict";
+				
+				var minutes = Math.floor(seconds / 60),
+					remSeconds = seconds % 60;
+				
+				if (remSeconds < 10) {
+					
+					remSeconds = "0" + remSeconds;
+				}
+				
+				myTimer.innerHTML = minutes + ":" + remSeconds;
+				
+				if (seconds > 0) {
+					seconds = seconds - 1;
+				} else {
+					clearInterval(countDown);
+					myTimer.innerHTML = "Times Up";
+				}
+				
+			}
+		</script>
+	
+
+
+
+
+
+	
+
+	</body>
+</html>
